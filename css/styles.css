@@ -1,0 +1,541 @@
+/* Base styles */
+:root {
+    --primary-color: #0055A4; /* Blue - primary color */
+    --secondary-color: #C8102E; /* Red - secondary color */
+    --accent-color: #FCD116; /* Yellow - accent color (Colombian flag colors) */
+    --text-color: #333;
+    --light-text: #fff;
+    --dark-bg: #222;
+    --light-bg: #f5f5f5;
+    --border-color: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--light-text);
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--light-text);
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: var(--light-text);
+    margin-left: 2rem;
+    padding: 0.5rem 0;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-links a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after {
+    width: 100%;
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.hero-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.banner-image {
+    max-width: 300px;
+    border-radius: 10px;
+    border: 5px solid var(--light-text);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    display: block;
+}
+
+/* Biography Section */
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bio-text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Vision Section */
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vision-list {
+    margin: 2rem 0;
+}
+
+.vision-list li {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--light-bg);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.vision-list h3 {
+    color: var(--primary-color);
+}
+
+/* Achievements Section */
+.achievements-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.achievements-list li {
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--primary-color);
+}
+
+.achievements-list li:hover {
+    transform: translateY(-5px);
+}
+
+.achievements-list h3 {
+    color: var(--primary-color);
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: var(--light-text);
+    padding: 0.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        margin: 0 0.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text {
+        font-size: 1.2rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .achievements-list {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+        margin: 0 0.25rem;
+        padding: 0.3rem 0;
+    }
+    
+    .hero {
+        min-height: 400px;
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .hero-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .banner-image {
+        max-width: 250px;
+    }
+    
+    .section {
+        padding: 2.5rem 0;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .bio-text p, 
+    .vision-content p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .vision-list li, 
+    .achievements-list li {
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .vision-list h3, 
+    .achievements-list h3 {
+        font-size: 1.3rem;
+    }
+    
+    .form-group label {
+        font-size: 0.95rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.7rem;
+        font-size: 1rem;
+    }
+    
+    .btn-submit {
+        width: 100%;
+        padding: 0.8rem;
+    }
+    
+    .social-links {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* iPhone-specific optimizations */
+@media (max-width: 414px) {
+    .navbar .container {
+        padding: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text {
+        font-size: 0.95rem;
+    }
+    
+    .banner-image {
+        max-width: 200px;
+    }
+    
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+    
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .vision-list li, 
+    .achievements-list li {
+        padding: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .social-link {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile touch improvements */
+@media (hover: none) {
+    /* Improve tap targets for mobile devices */
+    .nav-links a, 
+    .btn-submit,
+    .social-link {
+        transition: opacity 0.2s ease;
+    }
+    
+    .nav-links a:active, 
+    .btn-submit:active,
+    .social-link:active {
+        opacity: 0.7;
+    }
+    
+    /* Avoid sticky hover effects on mobile */
+    .achievements-list li:hover {
+        transform: none;
+    }
+    
+    /* Increase target sizes for touch */
+    .social-link {
+        padding: 0.8rem;
+        margin: 0 0.3rem;
+    }
+    
+    /* Fix iOS input styling */
+    input, 
+    textarea {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 4px;
+    }
+    
+    /* Fix iOS button styling */
+    .btn-submit {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+    }
+}
+
+/* iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+    /* Prevent rubber-band scrolling on iOS */
+    html, body {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        overscroll-behavior-y: none;
+    }
+    
+    /* Prevent zooming when focusing on inputs */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 16px;
+    }
+    
+    /* Fix iOS smooth scrolling */
+    .nav-links a {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Fix iOS button appearance */
+    button,
+    .btn-submit {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+/* iPhone specific media query - handle iPhone notch */
+@media only screen 
+and (device-width: 375px) 
+and (device-height: 812px) 
+and (-webkit-device-pixel-ratio: 3),
+only screen 
+and (device-width: 390px) 
+and (device-height: 844px) 
+and (-webkit-device-pixel-ratio: 3),
+only screen 
+and (device-width: 428px) 
+and (device-height: 926px) 
+and (-webkit-device-pixel-ratio: 3) {
+    .navbar {
+        padding-top: calc(1.5rem + env(safe-area-inset-top));
+    }
+    
+    footer {
+        padding-bottom: calc(3rem + env(safe-area-inset-bottom));
+    }
+} 
