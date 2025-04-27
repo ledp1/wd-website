@@ -27,76 +27,90 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Contact form handling
+    // Handle contact form submission
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
             
-            // Form validation
-            if (!formData.name || !formData.email || !formData.message) {
-                alert('Por favor complete todos los campos requeridos.');
-                return;
-            }
+            // Disable submit button and show sending state
+            const submitBtn = contactForm.querySelector('.btn-submit');
+            const originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.style.backgroundColor = '#888';
             
-            // Here you would typically send the data to a server
-            // For demo purposes, we'll just show an alert
-            alert('¡Gracias por su mensaje! Nos pondremos en contacto pronto.');
-            contactForm.reset();
+            // Simulate form submission (replace with actual API call)
+            setTimeout(function() {
+                // Show success message
+                const formControls = contactForm.querySelectorAll('.form-group, .btn-submit');
+                formControls.forEach(control => {
+                    control.style.display = 'none';
+                });
+                
+                // Create and show thank you message
+                const thankYouMessage = document.createElement('div');
+                thankYouMessage.className = 'thank-you-message';
+                thankYouMessage.innerHTML = `
+                    <h3>¡Gracias ${name}!</h3>
+                    <p>Tu mensaje ha sido enviado exitosamente.</p>
+                    <button class="btn-submit" id="reset-form">Enviar otro mensaje</button>
+                `;
+                contactForm.appendChild(thankYouMessage);
+                
+                // Add event listener to reset form
+                document.getElementById('reset-form').addEventListener('click', function() {
+                    // Clear form fields
+                    contactForm.reset();
+                    
+                    // Show form controls again
+                    formControls.forEach(control => {
+                        control.style.display = '';
+                    });
+                    
+                    // Remove thank you message
+                    thankYouMessage.remove();
+                    
+                    // Reset submit button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.backgroundColor = '';
+                });
+            }, 1500);
         });
     }
     
-    // Mobile optimization - enhance tap targets
-    const enhanceTapTargets = () => {
-        // Detect if mobile device
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        
-        if (isMobile) {
-            // Add more padding to navigation links for better tap targets
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.style.padding = '0.7rem 0.4rem';
-            });
-            
-            // Add touch feedback to buttons and links
-            const interactiveElements = document.querySelectorAll('button, .btn-submit, .nav-links a, .social-link');
-            
-            interactiveElements.forEach(element => {
-                element.addEventListener('touchstart', function() {
-                    this.style.opacity = '0.7';
-                });
-                
-                element.addEventListener('touchend', function() {
-                    this.style.opacity = '1';
-                });
-            });
-            
-            // Improve form inputs on mobile
-            const formInputs = document.querySelectorAll('input, textarea');
-            formInputs.forEach(input => {
-                // Auto-capitalization off for email fields
-                if (input.type === 'email') {
-                    input.setAttribute('autocapitalize', 'off');
-                }
-                
-                // Improve mobile keyboard experience
-                if (input.type === 'text') {
-                    input.setAttribute('autocomplete', 'name');
-                }
-                
-                // Better spacing for touch input
-                input.style.marginBottom = '1rem';
-            });
-        }
-    };
+    // Add active class to current navigation item
+    const sections = document.querySelectorAll('section');
     
-    enhanceTapTargets();
+    window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    });
+    
+    // Mobile optimization - enhance tap targets for iOS
+    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        // Add iOS-specific optimizations if needed
+        document.documentElement.classList.add('ios-device');
+    }
 }); 
