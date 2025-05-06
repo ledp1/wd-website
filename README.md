@@ -58,7 +58,6 @@ Ejemplo:
 
 ## Créditos
 
-- Diseño inspirado en el estilo del sitio web de Álvaro Uribe Vélez.
 - Imágenes: Shutterstock
 - Fuentes: Google Fonts
 
