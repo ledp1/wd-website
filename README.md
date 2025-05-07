@@ -25,7 +25,7 @@ Un sitio web de una sola página (single-page) en español que presenta informac
 
 1. Clona este repositorio:
    ```
-   git clone https://github.com/yourusername/william-dau-website.git
+   git clone https://github.com/ledpp/william-dau-website.git
    ```
 
 2. Navega al directorio del proyecto:
