@@ -39,14 +39,6 @@ Un sitio web de una sola página (single-page) en español que presenta informac
 
 Para el banner principal se recomienda usar una imagen profesional de William Dau Chamat. Se puede encontrar una adecuada en [Shutterstock](https://www.shutterstock.com/image-photo/cartagena-de-indias-colombia-january-06-1627930411).
 
-## Personalización
-
-Para personalizar el sitio:
-
-1. Reemplaza la imagen `images/banner.jpg` con la imagen del banner deseada.
-2. Modifica los estilos en `css/styles.css` según sea necesario.
-3. Actualiza la información en `index.html` para reflejar cambios o correcciones en el contenido.
-
 ## Accesibilidad
 
 Todas las imágenes del sitio incluyen texto alternativo (atributo `alt`) para garantizar la accesibilidad a personas con discapacidad visual. Al agregar o modificar imágenes en el sitio, asegúrate de incluir descripciones claras y concisas en el atributo `alt`.
