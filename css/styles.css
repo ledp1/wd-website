@@ -279,6 +279,18 @@ footer {
 .social-link {
     color: var(--light-text);
     padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
 }
 
 /* Media Queries for Responsiveness */
