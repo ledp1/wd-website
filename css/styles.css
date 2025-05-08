@@ -325,6 +325,18 @@ footer {
         gap: 1.5rem;
         text-align: center;
     }
+    
+    .btn-submit,
+    .nav-links a,
+    .social-link {
+        min-width: 48px;
+        min-height: 48px;
+        line-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
 }
 
 @media (max-width: 576px) {
