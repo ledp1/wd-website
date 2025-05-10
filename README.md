@@ -97,4 +97,6 @@ Este proyecto está bajo la Licencia BSD 3-Clause. Ver el archivo [LICENSE](LICE
 
 ## Contacto
 
-Para reportar problemas o sugerir mejoras, por favor abre un issue en este repositorio. 
+Para reportar problemas o sugerir mejoras, por favor abre un issue en este repositorio.
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ledp1/william-dau-website)
