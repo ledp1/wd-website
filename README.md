@@ -104,3 +104,7 @@ Para reportar problemas o sugerir mejoras, por favor abre un issue en este repos
 ## Penultimate Commit
 - Commit ID: `53d9c75`
 - Message: Update README with penultimate commit info
+
+## Penultimate Commit
+- Commit ID: `b931272`
+- Message: Remove latest commit sections from README and keep only penultimate commit info

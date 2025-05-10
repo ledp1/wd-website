@@ -674,4 +674,40 @@ html {
 
 .ios-device .nav-links a {
     padding: 0.7rem 0.5rem;
-} 
+}
+
+.contact-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+}
+
+.email-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.email-button:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-2px);
+}
+
+.email-button:active {
+    transform: translateY(0);
+}
+
+.email-button i {
+    font-size: 1.2rem;
+}
