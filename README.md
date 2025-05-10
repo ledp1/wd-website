@@ -101,10 +101,6 @@ Para reportar problemas o sugerir mejoras, por favor abre un issue en este repos
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ledp1/william-dau-website)
 
-## Latest Commit
-- Commit ID: `c33e553`
-- Message: Test commit with both hooks
-
-## Latest Commit
-- Commit ID: `b839e63`
-- Message: Remove test file
+## Penultimate Commit
+- Commit ID: `53d9c75`
+- Message: Update README with penultimate commit info
