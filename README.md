@@ -112,3 +112,7 @@ Para reportar problemas o sugerir mejoras, por favor abre un issue en este repos
 ## Penultimate Commit
 - Commit ID: `a85c11d`
 - Message: Fix: Improve email button styling and accessibility
+
+## Penultimate Commit
+- Commit ID: `edec814`
+- Message: Fix: Improve email link functionality with explicit onclick handler
