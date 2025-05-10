@@ -100,27 +100,3 @@ Este proyecto está bajo la Licencia BSD 3-Clause. Ver el archivo [LICENSE](LICE
 Para reportar problemas o sugerir mejoras, por favor abre un issue en este repositorio.
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ledp1/william-dau-website)
-
-## Penultimate Commit
-- Commit ID: `53d9c75`
-- Message: Update README with penultimate commit info
-
-## Penultimate Commit
-- Commit ID: `b931272`
-- Message: Remove latest commit sections from README and keep only penultimate commit info
-
-## Penultimate Commit
-- Commit ID: `a85c11d`
-- Message: Fix: Improve email button styling and accessibility
-
-## Penultimate Commit
-- Commit ID: `edec814`
-- Message: Fix: Improve email link functionality with explicit onclick handler
-
-## Penultimate Commit
-- Commit ID: `3e2e6c9`
-- Message: Fix: Improve email link handling for macOS Chrome
-
-## Penultimate Commit
-- Commit ID: `21b759f`
-- Message: Fix: Simplify email link implementation and add fallback text
