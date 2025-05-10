@@ -113,29 +113,4 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add iOS-specific optimizations if needed
         document.documentElement.classList.add('ios-device');
     }
-    
-    // Email link handler
-    const emailButton = document.querySelector('.email-button');
-    if (emailButton) {
-        emailButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            const email = 'williamdau@projectsfordemocracy.org';
-            
-            // Check if running on macOS Chrome
-            const isMacChrome = /Mac/.test(navigator.platform) && /Chrome/.test(navigator.userAgent);
-            
-            if (isMacChrome) {
-                // For macOS Chrome, try to open the default mail app directly
-                const mailtoLink = document.createElement('a');
-                mailtoLink.href = 'mailto:' + email;
-                mailtoLink.style.display = 'none';
-                document.body.appendChild(mailtoLink);
-                mailtoLink.click();
-                document.body.removeChild(mailtoLink);
-            } else {
-                // For other browsers/platforms, use the standard approach
-                window.location.href = 'mailto:' + email;
-            }
-        });
-    }
 }); 
