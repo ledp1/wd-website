@@ -104,3 +104,7 @@ Para reportar problemas o sugerir mejoras, por favor abre un issue en este repos
 ## Latest Commit
 - Commit ID: `c33e553`
 - Message: Test commit with both hooks
+
+## Latest Commit
+- Commit ID: `b839e63`
+- Message: Remove test file
