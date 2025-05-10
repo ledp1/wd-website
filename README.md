@@ -120,3 +120,7 @@ Para reportar problemas o sugerir mejoras, por favor abre un issue en este repos
 ## Penultimate Commit
 - Commit ID: `3e2e6c9`
 - Message: Fix: Improve email link handling for macOS Chrome
+
+## Penultimate Commit
+- Commit ID: `21b759f`
+- Message: Fix: Simplify email link implementation and add fallback text

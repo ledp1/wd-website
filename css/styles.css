@@ -697,6 +697,8 @@ html {
     border-radius: 4px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer !important;
+    pointer-events: auto !important;
 }
 
 .email-button:hover {

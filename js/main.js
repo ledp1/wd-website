@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-links a');
+    // Smooth scrolling for navigation links (EXCLUDING mailto:)
+    const navLinks = document.querySelectorAll('.nav-links a:not([href^="mailto:"])');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetSection.offsetTop - 80,
-                behavior: 'smooth'
-            });
+            // Only prevent default for non-mailto links
+            if (!this.getAttribute('href').startsWith('mailto:')) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
     
