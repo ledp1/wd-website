@@ -55,7 +55,11 @@ img {
 }
 
 .section {
-    padding: 5rem 0;
+    padding: 0 0 2rem 0;
+}
+
+.section:first-of-type {
+    padding-top: 2.5rem;
 }
 
 /* Header and Navigation */
@@ -130,7 +134,7 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
 }
 
 .hero-content {
@@ -139,15 +143,15 @@ header {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 2.5rem;
+    font-size: 3.2rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
 }
 
 .hero-text {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
 }
 
 .banner-image {
@@ -167,8 +171,8 @@ header {
 }
 
 .bio-text p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
 }
 
 /* Vision Section */
@@ -182,8 +186,8 @@ header {
 }
 
 .vision-list li {
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
     background-color: var(--light-bg);
     border-left: 5px solid var(--primary-color);
     border-radius: 5px;
@@ -197,14 +201,14 @@ header {
 .achievements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
-    margin-top: 2rem;
+    gap: 2rem;
+    margin-top: 1.5rem;
 }
 
 .achievement-card {
     background: #ffffff;
     border-radius: 12px;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -220,8 +224,8 @@ header {
     grid-column: 1 / -1;
     background: linear-gradient(135deg, #0055A4 0%, #003366 100%);
     color: white;
-    padding: 2.5rem;
-    margin-bottom: 2.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .achievement-card.major h3,
@@ -260,7 +264,7 @@ header {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #666;
-    margin-bottom: 2.2rem;
+    margin-bottom: 1.8rem;
 }
 
 .achievement-card p:last-child {
@@ -274,7 +278,7 @@ header {
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .form-group label {
@@ -312,7 +316,7 @@ header {
 footer {
     background-color: var(--dark-bg);
     color: var(--light-text);
-    padding: 3rem 0;
+    padding: 2.5rem 0;
 }
 
 .footer-content {
@@ -360,7 +364,7 @@ footer {
     }
     
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     .hero-text {
@@ -368,7 +372,7 @@ footer {
     }
     
     .section {
-        padding: 3rem 0;
+        padding: 2.5rem 0;
     }
     
     .footer-content {
@@ -394,7 +398,7 @@ footer {
     }
     
     .achievement-card {
-        padding: 2rem;
+        padding: 1.5rem;
     }
     
     .achievement-icon {
@@ -412,7 +416,7 @@ footer {
 
 @media (max-width: 576px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .achievements-grid {
@@ -457,7 +461,7 @@ footer {
     }
     
     .section {
-        padding: 2.5rem 0;
+        padding: 2rem 0;
     }
     
     h2 {
@@ -473,8 +477,8 @@ footer {
     
     .vision-list li, 
     .achievement-card {
-        padding: 1.2rem;
-        margin-bottom: 1rem;
+        padding: 1rem;
+        margin-bottom: 0.8rem;
     }
     
     .vision-list h3, 
@@ -791,4 +795,8 @@ html {
 
 .email-button i {
     font-size: 1.2rem;
+}
+
+#contacto.section {
+    padding-top: 1.5rem;
 }
