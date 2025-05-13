@@ -40,12 +40,12 @@ Un sitio web de una sola página (single-page) en español que presenta informac
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/ledp1/william-dau-website.git
+   git clone https://github.com/ledp1/wd-website.git
    ```
 
 2. Navega al directorio del proyecto:
    ```bash
-   cd william-dau-website
+   cd wd-website
    ```
 
 3. Abre el archivo `index.html` en tu navegador preferido o usa un servidor local como Live Server.
@@ -99,4 +99,4 @@ Este proyecto está bajo la Licencia BSD 3-Clause. Ver el archivo [LICENSE](LICE
 
 Para reportar problemas o sugerir mejoras, por favor abre un issue en este repositorio.
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ledp1/william-dau-website)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ledp1/wd-website)
