@@ -800,3 +800,66 @@ html {
 #contacto.section {
     padding-top: 1.5rem;
 }
+
+/* Weather widget */
+.weather-widget {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+    max-width: 700px;
+    margin: 1rem auto 0 auto;
+}
+
+.weather-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.weather-main {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+}
+
+.weather-temp {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.weather-desc {
+    font-size: 1.1rem;
+}
+
+.weather-extra {
+    display: flex;
+    gap: 1rem;
+}
+
+.weather-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #555;
+}
+
+.weather-updated {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 576px) {
+    .weather-temp {
+        font-size: 2rem;
+    }
+    .weather-extra {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
